@@ -1,0 +1,33 @@
+.tracker-template-container * {
+  font-family: "Space Mono", monospace !important;
+  /* Use !important if there are overrides */
+}
+
+.tracker-template-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+
+  }
+  
+  .back-button {
+    padding: 5px 10px;
+    align-self: center; 
+    margin-top: 75px;
+    text-align: center;
+    color: black;
+    background: white;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .tracker-content{
+    margin-bottom: 75px;
+    margin-top: -10px;
+  }
+
+  
+.back-button:hover {
+    box-shadow: 0px 0px 10px #ffffff00, 0px 0px 40px #ffffff95;
+  }

@@ -1,0 +1,130 @@
+.trading-log-container * {
+    font-family: "Space Mono", monospace !important; /* Use !important if there are overrides */
+}
+
+.trading-log-container {
+    background-color: transparent;
+    
+    padding: 20px;
+}
+
+.trading-log-table {
+    width: 100%;
+    
+    
+    border-spacing: 0;
+
+}
+
+.trading-log-table thead {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+.trading-log-table th, 
+.trading-log-table td {
+    border: 0.5px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.trading-log-table th {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.trading-log-table input,
+.trading-log-table select {
+    width: 100%;
+    border: 0.5px solid #ffffff;
+    background-color: white;
+    padding: 6px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.trading-log-table input:focus,
+.trading-log-table select:focus {
+    border-color: #333;
+}
+
+.trading-log-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.trading-log-btn {
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.trading-log-btn:hover {
+    color: black;
+    background-color: white;
+}
+
+.btn-add {
+    border: 0.5px solid white;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+}
+
+.btn-save {
+    border: 0.5px solid white;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+}
+
+.btn-remove {
+    margin: 5px;
+    padding: 3px 6px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.btn-remove:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px #ffffff00, 0px 0px 40px #ffffff95;
+}
+
+.btn-add:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px #ffffff00, 0px 0px 40px #ffffff95;
+}
+
+.btn-save:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px #ffffff00, 0px 0px 40px #ffffff95;
+}
+
+
+.cell-positive {
+    background-color: #3a7b3a;
+}
+
+.cell-negative {
+    background-color: #f3e6e6;
+}
+
+@media (max-width: 768px) {
+    .trading-log-table {
+        font-size: 0.9em;
+    }
+    
+    .trading-log-table th, 
+    .trading-log-table td {
+        padding: 8px;
+    }
+}

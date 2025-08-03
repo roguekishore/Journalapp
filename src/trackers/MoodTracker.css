@@ -1,0 +1,104 @@
+:root {
+  --color-black: #ffffff;
+  --color-white: #000000;
+  --font-family-mono: "Space Mono", monospace;
+  --cell-size: 30px; /* Default square size */
+  --transition-ease: all 0.3s ease;
+  --border-color: #000000;
+}
+
+.mood-tracker__container,
+.mood-tracker__container * {
+  font-family: var(--font-family-mono) !important; /* Use !important if there are overrides */
+}
+
+.mood-tracker__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  background: rgb(225, 225, 225);
+}
+
+.mood-tracker__header {
+  color: var(--color-white);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mood-tracker__year-navigation {
+  margin-bottom: 20px;
+}
+
+.mood-tracker__year-navigation button {
+  height: 25px;
+  width: 25px;
+  margin: 0 20px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-ease);
+}
+
+.mood-tracker__year-navigation button:hover {
+  box-shadow: 0px 0px 10px var(--color-white, 0), 0px 0px 40px var(--color-white, 0.6);
+}
+
+.mood-tracker__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mood-tracker__color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: var(--transition-ease);
+}
+
+.mood-tracker__color {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.mood-tracker__color-palette button:hover {
+  transform: scale(1.1);
+}
+
+.mood-tracker__calendar {
+  border-collapse: collapse;
+  color: var(--color-white);
+  font-weight: lighter;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.mood-tracker__calendar th,
+.mood-tracker__calendar td {
+  padding: 8px;
+  text-align: center;
+  border: 0.5px solid var(--border-color);
+}
+
+.mood-tracker__calendar th {
+  background-color: transparent;
+}
+
+.mood-tracker__month-label {
+  font-weight: bold;
+  width: 100px;
+}
+
+.mood-tracker__cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  cursor: pointer;
+  padding: 0;
+}

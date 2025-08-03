@@ -1,0 +1,87 @@
+.thoughts-tracker__container,
+.thoughts-tracker__container * {
+  font-family: "Space Mono", monospace !important;
+}
+
+.thoughts-tracker__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.thoughts-tracker__header {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.thoughts-tracker__year-navigation {
+  margin-bottom: 20px;
+}
+
+.thoughts-tracker__year-navigation button {
+  height: 25px;
+  width: 25px;
+  margin: 0 20px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  transition: all ease;
+}
+
+.thoughts-tracker__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.thoughts-tracker__color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: all ease;
+}
+
+.thoughts-tracker__color {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.thoughts-tracker__calendar {
+  border-collapse: collapse;
+  color: white;
+  width: 100%;
+}
+
+.thoughts-tracker__calendar th,
+.thoughts-tracker__calendar td {
+  padding: 8px;
+  text-align: center;
+  border: 0.5px solid #ddd;
+}
+
+.thoughts-tracker__calendar th {
+  background-color: transparent;
+}
+
+.thoughts-tracker__month-label {
+  font-weight: bold;
+  width: 100px;
+}
+
+.thoughts-tracker__cell {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.thoughts-tracker__color-palette button:hover {
+  transform: scale(1.1);
+}

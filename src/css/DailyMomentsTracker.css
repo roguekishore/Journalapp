@@ -1,0 +1,111 @@
+.moments-container * {
+    font-family: "Space Mono", monospace !important; 
+}
+
+.moments-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 75px;
+  }
+  
+  .month-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+  
+  .month-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  .moments-nav-button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 0.5px solid white;
+    padding: 5px 10px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0px 20px;
+  }
+  
+  .moments-nav-button:hover {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 0px 10px #ffffff00, 0px 0px 40px #ffffff95;
+  }
+  
+  .days-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .day-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+  }
+  
+  .day-number {
+    color: #ffffff;
+    font-weight: bold;
+
+  }
+  .moment-textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 0.5px solid #ffffff;
+    background-color: #00000000;
+    border-radius: 4px;
+    color: #ffffff;
+    resize: none; /* Prevent manual resizing */
+    overflow: hidden; /* Hide scrollbars */
+    font-family: inherit; /* Ensure consistent font */
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  .moment-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 0.5px solid #ffffff;
+    background-color: #00000000;
+    border-radius: 4px;
+    color: #ffffff;
+  }
+  
+.save-button-container {
+margin-bottom: 20px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  
+  .moments-save-button {
+    background-color: transparent;
+    color: white;
+    border: 0.5px solid white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .moments-save-button:hover {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0px 0px 10px #ffffff00, 0px 0px 40px #ffffff95;
+  }
+  
+  .moments-save-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }

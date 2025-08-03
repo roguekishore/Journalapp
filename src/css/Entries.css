@@ -1,0 +1,500 @@
+.hover-cards-container,
+.hover-cards-container * {
+  font-family: "Space Mono", monospace !important;
+  /* Use !important if there are overrides */
+}
+
+
+.hover-cards-container {
+  --hover-background-color: #000000;
+  --hover-text-color: #a1a1aa;
+  --hover-card-background-color: rgba(255, 255, 255, .015);
+  --hover-card-border-color: rgba(255, 255, 255, 0.1);
+  --hover-card-box-shadow-1: rgba(0, 0, 0, 0.05);
+  --hover-card-box-shadow-1-y: 3px;
+  --hover-card-box-shadow-1-blur: 6px;
+  --hover-card-box-shadow-2: rgba(0, 0, 0, 0.1);
+  --hover-card-box-shadow-2-y: 8px;
+  --hover-card-box-shadow-2-blur: 15px;
+  --hover-card-label-color: #fff;
+  --hover-card-icon-color: #d4d4d8;
+  --hover-card-icon-background-color: rgba(255, 255, 255, 0.08);
+  --hover-card-icon-border-color: rgba(255, 255, 255, 0.12);
+  --hover-card-shine-opacity: 0.1;
+  --hover-card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(185, 16, 16, 0) 0deg, #ff0000 25deg, rgb(255, 0, 0, 0.5) 295deg, rgba(185, 16, 16, 0) 360deg);
+  --hover-card-line-color: #2c2a2a;
+  --hover-card-tile-color: rgba(255, 0, 0, 0.05);
+  --hover-card-hover-border-color: rgba(255, 255, 255, 0.2);
+  --hover-card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+  --hover-card-hover-box-shadow-1-y: 5px;
+  --hover-card-hover-box-shadow-1-blur: 10px;
+  --hover-card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+  --hover-card-hover-box-shadow-2-y: 15px;
+  --hover-card-hover-box-shadow-2-blur: 25px;
+  --hover-blur-opacity: 0.6;
+
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', Arial;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hover-background-color);
+
+  position: relative;
+  /* Change from absolute to relative */
+  z-index: 1;
+  /* Ensure it's not blocking other elements */
+  overflow: visible;
+}
+
+
+.entries-back-button {
+  margin-bottom: 20px;
+  /* Space between the button and the grid */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #f91b1b;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  z-index: 20000;
+  margin-top: 120px;
+}
+
+.entries-back-button:hover {
+  background-color: #555;
+}
+
+
+.hover-cards-container:before {
+
+  position: absolute;
+  inset: 0 -60% 65% -60%;
+  background-image: radial-gradient(ellipse at top, #10b981 0%, var(--hover-background-color) 50%);
+  opacity: var(--hover-blur-opacity);
+}
+
+.hover-cards-grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  position: relative;
+  gap: 2em;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+.hover-card1 {
+  background-color: var(--hover-background-color);
+  box-shadow: 0px var(--hover-card-box-shadow-1-y) var(--hover-card-box-shadow-1-blur) var(--hover-card-box-shadow-1), 0px var(--hover-card-box-shadow-2-y) var(--hover-card-box-shadow-2-blur) var(--hover-card-box-shadow-2), 0 0 0 1px var(--hover-card-border-color);
+
+  min-width: 350px;
+  min-height: 350px;
+
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+  transition: box-shadow 0.25s;
+}
+
+.hover-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 25px;
+}
+
+.no-month{
+  justify-content: center;
+    align-items: center;    
+}
+
+.hover-card-title1 {
+  z-index: 2;
+  position: relative;
+  margin: 120px 0 12px 0;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2;
+  color: var(--hover-card-label-color);
+  text-align: center;
+}
+
+.hover-card {
+  background-color: var(--hover-background-color);
+  box-shadow: 0px var(--hover-card-box-shadow-1-y) var(--hover-card-box-shadow-1-blur) var(--hover-card-box-shadow-1), 0px var(--hover-card-box-shadow-2-y) var(--hover-card-box-shadow-2-blur) var(--hover-card-box-shadow-2), 0 0 0 1px var(--hover-card-border-color);
+  flex: 1 1 auto;
+  padding: 20px;
+  border-radius: 15px;
+  
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  text-align: center;
+  transition: box-shadow 0.25s;
+}
+
+.hover-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background-color: var(--hover-card-background-color);
+}
+
+.hover-card-title {
+  z-index: 2;
+  position: relative;
+  margin: 12px 0 12px 0;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2;
+  color: var(--hover-card-label-color);
+  text-align: center;
+}
+
+.hover-card-shine {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hover-card-shine:before {
+  content: '';
+  width: 150%;
+  padding-bottom: 150%;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 55%;
+  filter: blur(35px);
+  opacity: var(--hover-card-shine-opacity);
+  transform: translateX(-50%);
+  background-image: var(--hover-card-shine-gradient);
+}
+
+.hover-card-background {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+  mask-image: radial-gradient(circle at 60% 5%, black 0%, black 15%, transparent 60%);
+}
+
+.hover-card-tiles {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.hover-card-tile {
+  position: absolute;
+  background-color: var(--hover-card-tile-color);
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.hover-card-tile.hover-card-tile-4,
+.hover-card-tile.hover-card-tile-6,
+.hover-card-tile.hover-card-tile-10 {
+  animation-delay: -2s;
+}
+
+.hover-card-tile.hover-card-tile-3,
+.hover-card-tile.hover-card-tile-5,
+.hover-card-tile.hover-card-tile-8 {
+  animation-delay: -4s;
+}
+
+.hover-card-tile.hover-card-tile-2,
+.hover-card-tile.hover-card-tile-9 {
+  animation-delay: -6s;
+}
+
+.hover-card-tile.hover-card-tile-1 {
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 22.5%;
+}
+
+.hover-card-tile.hover-card-tile-2 {
+  top: 0;
+  left: 22.5%;
+  height: 10%;
+  width: 27.5%;
+}
+
+.hover-card-tile.hover-card-tile-3 {
+  top: 0;
+  left: 50%;
+  height: 10%;
+  width: 27.5%;
+}
+
+.hover-card-tile.hover-card-tile-4 {
+  top: 0;
+  left: 77.5%;
+  height: 10%;
+  width: 22.5%;
+}
+
+.hover-card-tile.hover-card-tile-5 {
+  top: 10%;
+  left: 0;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.hover-card-tile.hover-card-tile-6 {
+  top: 10%;
+  left: 22.5%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.hover-card-tile.hover-card-tile-7 {
+  top: 10%;
+  left: 50%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.hover-card-tile.hover-card-tile-8 {
+  top: 10%;
+  left: 77.5%;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.hover-card-tile.hover-card-tile-9 {
+  top: 32.5%;
+  left: 50%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.hover-card-tile.hover-card-tile-10 {
+  top: 32.5%;
+  left: 77.5%;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+@keyframes hover-card-tile {
+
+  0%,
+  12.5%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  82.5% {
+    opacity: 0;
+  }
+}
+
+.hover-card-line {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.hover-card-line:before,
+.hover-card-line:after {
+  content: '';
+  position: absolute;
+  background-color: var(--hover-card-line-color);
+  transition: transform 0.35s;
+}
+
+.hover-card-line:before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+.hover-card-line:after {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+}
+
+.hover-card-line.hover-card-line-1:before {
+  top: 10%;
+}
+
+.hover-card-line.hover-card-line-1:after {
+  left: 22.5%;
+}
+
+.hover-card-line.hover-card-line-1:before,
+.hover-card-line.hover-card-line-1:after {
+  transition-delay: 0.3s;
+}
+
+.hover-card-line.hover-card-line-2:before {
+  top: 32.5%;
+}
+
+.hover-card-line.hover-card-line-2:after {
+  left: 50%;
+}
+
+.hover-card-line.hover-card-line-2:before,
+.hover-card-line.hover-card-line-2:after {
+  transition-delay: 0.15s;
+}
+
+.hover-card-line.hover-card-line-3:before {
+  top: 55%;
+}
+
+.hover-card-line.hover-card-line-3:after {
+  right: 22.5%;
+}
+
+/* Hover states */
+.hover-card:hover {
+  box-shadow: 0px 3px 6px var(--hover-card-hover-box-shadow-1), 0px var(--hover-card-hover-box-shadow-2-y) var(--hover-card-hover-box-shadow-2-blur) var(--hover-card-hover-box-shadow-2), 0 0 0 1px var(--hover-card-hover-border-color);
+}
+
+.hover-card:hover .hover-card-icon::after {
+  background-color: var(--hover-card-hover-icon-background-color);
+  border-color: var(--hover-card-hover-icon-border-color);
+}
+
+.hover-card:hover .hover-card-icon svg {
+  color: var(--hover-card-hover-icon-color);
+}
+
+.hover-card:hover .hover-card-shine {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+.hover-card:hover .hover-card-background .hover-card-tiles {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.hover-card:hover .hover-card-background .hover-card-tile {
+  animation-name: hover-card-tile;
+}
+
+.hover-card:hover .hover-card-background .hover-card-line {
+  opacity: 1;
+  transition-duration: 0.15s;
+}
+
+.hover-card:hover .hover-card-background .hover-card-line:before {
+  transform: scaleX(1);
+}
+
+.hover-card:hover .hover-card-background .hover-card-line:after {
+  transform: scaleY(1);
+}
+
+.hover-card:hover .hover-card-background .hover-card-line.hover-card-line-1:before,
+.hover-card:hover .hover-card-background .hover-card-line.hover-card-line-1:after {
+  transition-delay: 0s;
+}
+
+.hover-card:hover .hover-card-background .hover-card-line.hover-card-line-2:before,
+.hover-card:hover .hover-card-background .hover-card-line.hover-card-line-2:after {
+  transition-delay: 0.15s;
+}
+
+.hover-card:hover .hover-card-background .hover-card-line.hover-card-line-3:before,
+.hover-card:hover .hover-card-background .hover-card-line.hover-card-line-3:after {
+  transition-delay: 0.3s;
+}
+
+.hover-card1:hover {
+  box-shadow: 0px 3px 6px var(--hover-card-hover-box-shadow-1), 0px var(--hover-card-hover-box-shadow-2-y) var(--hover-card-hover-box-shadow-2-blur) var(--hover-card-hover-box-shadow-2), 0 0 0 1px var(--hover-card-hover-border-color);
+}
+
+.hover-card1:hover .hover-card-icon::after {
+  background-color: var(--hover-card-hover-icon-background-color);
+  border-color: var(--hover-card-hover-icon-border-color);
+}
+
+.hover-card1:hover .hover-card-icon svg {
+  color: var(--hover-card-hover-icon-color);
+}
+
+.hover-card1:hover .hover-card-shine {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+}
+
+.hover-card1:hover .hover-card-background .hover-card-tiles {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.hover-card1:hover .hover-card-background .hover-card-tile {
+  animation-name: hover-card-tile;
+}
+
+.hover-card1:hover .hover-card-background .hover-card-line {
+  opacity: 1;
+  transition-duration: 0.15s;
+}
+
+.hover-card1:hover .hover-card-background .hover-card-line:before {
+  transform: scaleX(1);
+}
+
+.hover-card1:hover .hover-card-background .hover-card-line:after {
+  transform: scaleY(1);
+}
+
+.hover-card1:hover .hover-card-background .hover-card-line.hover-card-line-1:before,
+.hover-card1:hover .hover-card-background .hover-card-line.hover-card-line-1:after {
+  transition-delay: 0s;
+}
+
+.hover-card1:hover .hover-card-background .hover-card-line.hover-card-line-2:before,
+.hover-card1:hover .hover-card-background .hover-card-line.hover-card-line-2:after {
+  transition-delay: 0.15s;
+}
+
+.hover-card1:hover .hover-card-background .hover-card-line.hover-card-line-3:before,
+.hover-card1:hover .hover-card-background .hover-card-line.hover-card-line-3:after {
+  transition-delay: 0.3s;
+}

@@ -1,0 +1,94 @@
+.energy-tracker__container,
+.energy-tracker__container * {
+  font-family: "Space Mono", monospace !important; /* Use !important if there are overrides */
+}
+
+.energy-tracker__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.energy-tracker__header {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.energy-tracker__year-navigation {
+  margin-bottom: 20px;
+}
+
+.energy-tracker__year-navigation button {
+  height: 25px;
+  width: 25px;
+  margin: 0 20px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  transition: all ease;
+}
+
+.energy-tracker__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.energy-tracker__color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: all ease;
+}
+
+.energy-tracker__color {
+  width: 30px; /* Square size */
+  height: 30px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.energy-tracker__calendar {
+  border-collapse: collapse;
+  color: white;
+  font-weight: lighter;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.energy-tracker__calendar th,
+.energy-tracker__calendar td {
+  padding: 8px;
+  text-align: center;
+  border: 0.5px solid #ddd;
+}
+
+.energy-tracker__calendar th {
+  background-color: transparent;
+}
+
+.energy-tracker__month-label {
+  font-weight: bold;
+  width: 100px;
+}
+
+.energy-tracker__cell {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.energy-tracker__color-palette button:hover {
+  transform: scale(1.1);
+}
+
+.energy-tracker__year-navigation button:hover {
+  box-shadow: 0px 0px 10px #ffffff00, 0px 0
+}

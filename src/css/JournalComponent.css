@@ -1,0 +1,8 @@
+.journal-component-container, 
+.journal-component-container * {
+    font-family: "Space Mono", monospace !important; /* Use !important if there are overrides */
+}
+
+.journal-component-container{
+    margin-top: 200px;
+}
